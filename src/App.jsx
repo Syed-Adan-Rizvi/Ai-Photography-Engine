@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/NavbarComponent/Navbar";
 import PackageDesign from "./pages/PackageDesignComponent/PackageDesign";
-import LogoDesign from "./pages/LogoDesignComponent/Logodesigne";
-import EditImage from "./pages/EditImageComponent/Editimage";
-import AiPhotoshoot from "./pages/AiPhotoshootComponent/Aiphotoshoot";
+import LogoDesign from "./pages/LogoDesignComponent/LogoDesign";        // ✅ fixed
+import EditImage from "./pages/EditImageComponent/EditImage";            // ✅ fixed
+import AiPhotoshoot from "./pages/AiPhotoshootComponent/AiPhotoshoot";  // ✅ fixed
 import PackageRange from "./pages/PackageRange/PackageRange";
 import BrandMoodboard from './pages/BrandMoodboard/BrandMoodboard';
 import BusinessMaterials from './pages/BusinessMaterials/BusinessMaterials';
