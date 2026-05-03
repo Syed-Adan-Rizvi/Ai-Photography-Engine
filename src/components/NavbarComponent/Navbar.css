@@ -1,0 +1,139 @@
+/* --- Global Styles --- */
+.brand-title {
+  font-weight: 700;
+  font-size: 2rem;
+  color: black;
+  text-align: center;
+  margin: 0;
+}
+
+/* --- DESKTOP MENU (Horizontal Scroll) --- */
+.desktop-menu-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px 5px;
+  justify-content: center;
+  
+  /* Scrollbar Hide Logic */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.desktop-menu-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- MOBILE & OFFCANVAS STYLES --- */
+.custom-offcanvas {
+  background-color: white;
+  width: 280px !important;
+  border-left: 1px solid #ddd;
+}
+
+.offcanvas-header {
+  background-color: var(--primary-color); /* Naya Color Variable */
+  color: white;
+}
+
+.drawer-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  border: 1px solid #eee;
+  transition: all 0.2s;
+}
+
+.drawer-link:hover {
+  background-color: var(--primary-light);
+  color: var(--primary-hover);
+  border-color: var(--primary-color);
+}
+
+.drawer-link svg {
+  margin-right: 12px;
+  color: var(--primary-color);
+}
+
+/* --- BUTTONS (Nav Cards) --- */
+.nav-card {
+  min-width: 150px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 85px;
+  background-color: white;
+  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.nav-card:hover {
+  transform: translateY(-3px);
+  background-color: var(--primary-light);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-hover);
+}
+
+.nav-card.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.nav-card svg {
+  margin-bottom: 5px;
+  font-size: 1.4rem;
+}
+
+/* --- IMPORTANT: VISIBILITY CONTROL (Media Queries) --- */
+
+/* Mobile View (Below 992px) */
+@media (max-width: 991px) {
+  .desktop-menu-container {
+    display: none !important; /* Desktop menu mobile per NAHI dikhega */
+  }
+
+  .mobile-toggler {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+  
+  .brand-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Desktop View (Above 992px) */
+@media (min-width: 992px) {
+  .mobile-toggler {
+    display: none !important; /* Hamburger desktop per NAHI dikhega */
+  }
+  
+  /* Offcanvas desktop per galti se na khule */
+  .custom-offcanvas {
+    display: none !important; 
+    visibility: hidden !important;
+  }
+  
+  .offcanvas-backdrop {
+    display: none !important;
+  }
+}

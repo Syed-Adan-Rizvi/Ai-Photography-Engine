@@ -1,0 +1,78 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* --- NEW THEME VARIABLES --- */
+  /* Aapka Naya Color */
+  --primary-color: oklch(64.8% .2 131.684); 
+  
+  /* Hover Color (Thoda Dark kiya hai effect ke liye) */
+  --primary-hover: oklch(55% .2 131.684); 
+  
+  /* Light Background (Card hover effects ke liye) */
+  --primary-light: oklch(95% .05 131.684);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f8f9fa; /* Light Gray Background */
+}
+
+/* --- GLOBAL THEME CLASSES --- */
+
+/* 1. Background Theme (Headers ke liye) */
+.bg-theme {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+}
+
+/* 2. Text Theme (Headings ke liye) */
+.text-theme {
+  color: var(--primary-color) !important;
+}
+
+/* 3. Button Theme (Buttons ke liye) */
+.btn-theme {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: white !important;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Halka shadow */
+}
+
+/* Button Hover Effect */
+.btn-theme:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  
+  box-shadow: 6px 6px 12px var(--primary-color); /* Shadow badh jayega */
+  color: white;
+}
+
+/* Button Loading State */
+.btn-loading {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+/* 4. Spinner/Loading Color */
+.spinner-border {
+  color: var(--primary-color);
+}
+.btn-theme .spinner-border {
+  color: white; /* Button ke andar spinner white rahega */
+}
+
+/* 5. Fade In Animation (Smooth entry ke liye) */
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
