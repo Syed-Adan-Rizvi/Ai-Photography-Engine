@@ -1,23 +1,19 @@
 import axios from "axios";
 
+
 // n8n webhook URLs (FULL URLs)
-const PACKAGE_DESIGN_URL =
-  "https://ahmed098.app.n8n.cloud/webhook/pacakage-design0";
+const PACKAGE_DESIGN_URL =import.meta.env.VITE_PACKAGE_DESIGN_URL
+  
 
-const LOGO_DESIGN_URL =
-  "https://n8n-bilal.onrender.com/webhook-test/LOGO_ID";
+const LOGO_DESIGN_URL =import.meta.env.VITE_LOGO_DESIGN_URL
 
-const EDIT_IMAGE_URL =
-  "https://n8n-bilal.onrender.com/webhook-test/EDIT_ID";
+const EDIT_IMAGE_URL =import.meta.env.VITE_EDIT_IMAGE_URL
 
-const AI_PHOTOSHOOT_URL =
-  "https://ahmed098.app.n8n.cloud/webhook/product-design0";
+const AI_PHOTOSHOOT_URL =import.meta.env.VITE_AI_PHOTOSHOOT_URL
 
-const PACKAGE_RANGE_URL =
-  "https://hb007.app.n8n.cloud/webhook/product-variations";
+const PACKAGE_RANGE_URL =import.meta.env.VITE_PACKAGE_RANGE_URL
 
-const BRAND_MOODBOARD_URL =
-  "https://hb007.app.n8n.cloud/webhook-test/fff50311-dc8f-439e-bca1-24ef35cc69b5";  
+const BRAND_MOODBOARD_URL =import.meta.env.VITE_BRAND_MOODBOARD_URL
 
 // --- APIs ---
 
